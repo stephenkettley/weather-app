@@ -46,6 +46,15 @@ async function getWeatherData(cityValue) {
 
 
 } catch (error) {
-    console.log(error);
-  }
+  weatherDataElement.querySelector(
+    ".icon"
+  ).innerHTML = "";
+
+  weatherDataElement.querySelector(
+    ".temperature"
+  ).textContent = "";
+
+  weatherDataElement.querySelector(".description").textContent = "An error occured, please try again later!";
+
+  weatherDataElement.querySelector(".details") = "";
 }
